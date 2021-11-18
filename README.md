@@ -4,7 +4,7 @@ This document explains GitOps way of deploying iLender application in Dev and Pr
 
 - ArgoCD is installed and available in an Openshift Cluster. 
 - iLender app is going to be deployed in `in-cluster`, the Openshift Cluster where ArgoCD is installed.
-- The namespaces `ilender-dev-ns` and `ilender-prod-ns` are considered as Dev, Prod `in-cluster`s .
+- The namespaces `ilender-dev-ns` and `ilender-prod-ns` are considered as Dev and Prod `in-cluster`s .
 
 ## 1. Yamls
 
@@ -24,6 +24,7 @@ The delta for Dev and Prod are available here.
 We need to create an entry (application) in ArgoCD, to point to iLender application. For each Dev and Prod `in-cluster` of iLender, we need to have separate entry (application) in ArgoCD. Here the yamls to create app in ArgoCD.
 
 [ilender-dev ](argo-app/ilender-app-dev.yaml) 
+
 [ilender-prod ](argo-app/ilender-app-prod.yaml) 
 
 The ArgoCD appplication looks like the below.
